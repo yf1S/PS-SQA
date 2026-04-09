@@ -31,6 +31,7 @@ class MosPredictor(nn.Module):
         x = res['x']#(b,t,f)
         t1 = x.shape[1]
         t2 = pitchs.shape[1]
+        #test
         pitchs = pitchs.unsqueeze(-1)
         if t1 == t2:
             x_concat_pitch = torch.cat([x,pitchs],dim = -1)
